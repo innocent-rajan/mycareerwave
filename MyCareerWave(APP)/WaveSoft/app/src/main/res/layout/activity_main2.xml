@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.prernapadhee.wavesoft.Main2Activity"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/half">
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:hint="   PASSWORD"
+        android:padding="12dp"
+        android:layout_marginTop="18dp"
+        android:inputType="textPassword"
+        android:drawablePadding="12dp"
+        android:layout_below="@+id/username"
+        android:background="@drawable/mainedittext"
+        android:drawableTint="@color/c12"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"/>
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/login"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="75dp"
+        android:textSize="18dp"
+        android:layout_marginTop="145dp"
+        android:textColor="@color/c14"
+        android:onClick="function"
+        android:text="LOGIN"
+        android:background="@drawable/mainloginbutton"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:drawablePadding="12dp"
+        android:drawableTint="@color/c12"
+        android:hint="       USERNAME"
+        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        android:layout_marginTop="105dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mainedittext"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login"
+        android:layout_marginTop="25dp"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/c17"
+        android:drawableLeft="@drawable/minilock"
+        android:drawableTint="@color/c17"
+        android:text="  Forgot Password?"
+        android:onClick="forgotpassword"/>
+
+</RelativeLayout>

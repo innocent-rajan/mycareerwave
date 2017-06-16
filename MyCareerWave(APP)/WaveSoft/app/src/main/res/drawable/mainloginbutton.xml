@@ -1,0 +1,9 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/loginshadow"/>
+    <item
+        android:drawable="@drawable/loginbutton"
+        android:bottom="7px" />
+
+</layer-list>
