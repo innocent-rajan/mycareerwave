@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style type="text/css">
+	.required{
+		color: red;
+		display: inline-block;
+	}
+	</style>
+	<script type="text/javascript">
+	function pass_check(){
+		var pass= document.register.password.value;
+		var con_pass= document.register.confirm_password.value;
+		if(pass.length != 6){
+			document.getElementById("password").style="visibility:visible;display: inline-block;color: red;";
+			document.getElementById("password").innerHTML="Length of password must be greater than 6."
+			document.register.password.focus();
+			return false;
+		}
+		if(pass != con_pass){
+			document.getElementById("password").style="visibility:visible;display: inline-block;color: red;";
+			document.getElementById("password").innerHTML="Pasword didn't match."
+			document.register.password.focus();
+			return false;	
+		}
+	}
+
+	function display(){
+		document.getElementById("password").style="visibility: hidden;display: inline-block;color: red;";
+	}
+
+</script>
+</head>
+<body>
+<h1>Register</h1>
+<div class="required">*</div> Required Field<br><br>
+	<form method="post" action="register.php" name="register" onsubmit="return pass_check()">
+		First Name: <input type="text" name="first_name" required><div class="required">*</div><br><br>
+		Last Name: <input type="text" name="last_name" required><div class="required">*</div><br><br>
+		Username: <input type="text" name="username" required><div class="required">*</div><br><br>
+		Gender: <input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="Female">Female<br><br>
+		Email: <input type="email" name="email" required><div class="required">*</div><br><br>
+		Password: <input type="password" name="password" required onclick="display()"><div class="required">*</div><div style="display: inline-block;color: red;visibility: hidden;" id="password"> </div><br><br>
+		Confirm Password: <input type="password" name="confirm_password" required><div class="required"> *</div><br><br>
+		<button>Submit</button>
+	</form>
+</body>
+</html>
